@@ -1,13 +1,8 @@
 {
-  "functions": {
-    "api/[[...slug]].js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/[[...slug]].js"
+      "destination": "/api/$1"
     }
   ]
 }
