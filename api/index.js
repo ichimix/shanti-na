@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 // ヘルスチェック（必ず200）
-app.get("/health", (_, res) => res.status(200).send("ok"));
+app.get("/", (_, res) => res.status(200).send("ok"));
 
 // LINE Webhook 入口（ここでだけLINE/AIを初期化）
 app.post("/webhook", async (req, res) => {
